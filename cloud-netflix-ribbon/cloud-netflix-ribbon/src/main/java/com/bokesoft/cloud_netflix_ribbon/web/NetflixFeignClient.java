@@ -25,8 +25,8 @@ public class NetflixFeignClient {
 		@RequestMapping(value = "/add", method = RequestMethod.GET)
 		String add(@RequestParam Map<String, Object> map);
 	}
-	// feign引入`APPLICATION NAME = DIDISPACE`的服务
-	@FeignClient(name = "DIDISPACE")
+	// feign引入`APPLICATION NAME = SERVICE-A`的服务
+	@FeignClient(name = "SERVICE-A")
 	interface ServerAClient {
 		@RequestMapping(value = "/callServiceB", method = RequestMethod.GET)
 		String invokeServiceB(@RequestParam Map<String, Object> map);

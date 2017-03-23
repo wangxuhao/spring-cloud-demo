@@ -9,7 +9,7 @@
 - `cloud-netflix-ribbon`：提供服务`RIBBON-CONSUMER`;使用`@EnableFeignClients`
 	- `ConsumerController.java` 使用了`RestTemplate`调用`SERVICE-B`的`add`接口
 	- `NetflixFeignClient.java`使用了Netflix-feignClient`@FeignClient`调用`SERVICE-B`服务的`add`接口
-- `cloud-service-A`：提供服务`DIDISPACE`;
+- `cloud-service-A`：提供服务`SERVICE-A`;
 	- `TestController.java`使用了配置中心的配置;
 	- `CallServerB.java`使用`RestTemplate`调用`RIBBON-CONSUMER`服务的add接口
 - `cloud-netflix-zuul` : 提供服务 `API-GATEWAY`(路由服务)
