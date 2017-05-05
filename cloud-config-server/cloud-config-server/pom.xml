@@ -23,7 +23,10 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Camden.SR5</version>
+				<!-- 这个版本对bus的refresh不支持整体刷新 -->
+				<!-- <version>Camden.SR5</version> -->
+				<!-- 这个版本支持bus的refresh整体刷新 -->
+				<version>Brixton.SR5</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -33,6 +36,16 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<!-- 将配置也注册到eureka服务发现中 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+		<!-- Config Server中也引入Spring Cloud Bus，将配置服务端也加入到消息总线中来 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
 		</dependency>
 	</dependencies>
 </project>
