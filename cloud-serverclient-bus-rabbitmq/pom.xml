@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.bokesoft</groupId>
-	<artifactId>cloud-serverclient-bus</artifactId>
+	<artifactId>cloud-serverclient-bus-rabbitmq</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>cloud-serverclient-bus</name>
+	<name>cloud-serverclient-bus-rabbitmq</name>
 	<description>Spring Cloud project</description>
 
 	<parent>
