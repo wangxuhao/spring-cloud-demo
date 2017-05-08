@@ -8,13 +8,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ServerBusApplication {
+public class ServerBusRabbitmqApplication {
 	@Bean
 	@LoadBalanced
 	RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(ServerBusApplication.class).web(true).run(args);
+		new SpringApplicationBuilder(ServerBusRabbitmqApplication.class).web(true).run(args);
 	}
 }
